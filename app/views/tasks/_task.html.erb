@@ -1,0 +1,9 @@
+<div id="<%= dom_id task %>">
+<div class="card p-5">
+  <h5 class="card-title"><%= task.title %></h5>
+  <p class="card-text"><%= task.body %></p>
+  <%= simple_form_for(task) do |f| %>
+      <%= f.input :completed, as: :boolean, label: "Виконано" %>
+      <%= f.submit "Оновити", class: "btn btn-info" %>
+    <% end %>
+</div>
