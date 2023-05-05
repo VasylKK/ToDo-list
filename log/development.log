@@ -6656,3 +6656,1604 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.5ms | Allocations: 5665)
 
 
+Started GET "/" for ::1 at 2023-05-05 01:03:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 265.4ms | Allocations: 10705)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 365.4ms | Allocations: 18196)
+  Rendered layout layouts/application.html.erb (Duration: 550.2ms | Allocations: 39173)
+Completed 200 OK in 757ms (Views: 576.2ms | ActiveRecord: 6.0ms | Allocations: 54575)
+
+
+Started GET "/" for ::1 at 2023-05-05 14:47:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 57ms (ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 14:47:23 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.0ms | Allocations: 730)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 244.6ms | Allocations: 12616)
+  Rendered layout layouts/application.html.erb (Duration: 430.7ms | Allocations: 33662)
+Completed 200 OK in 538ms (Views: 497.1ms | ActiveRecord: 1.6ms | Allocations: 42006)
+
+
+Started GET "/" for ::1 at 2023-05-05 14:47:35 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 14:47:35 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3304)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5155)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 5813)
+
+
+Started GET "/" for ::1 at 2023-05-05 14:52:02 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 14:52:02 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3293)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 5097)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 5753)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 14:52:19 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "probniy@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 331ms (ActiveRecord: 0.3ms | Allocations: 5684)
+
+
+Started GET "/" for ::1 at 2023-05-05 14:52:19 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2726)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4614)
+Completed 200 OK in 53ms (Views: 25.0ms | ActiveRecord: 1.1ms | Allocations: 9202)
+
+
+Started GET "/tasks/new" for ::1 at 2023-05-05 14:52:23 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (Duration: 9.1ms | Allocations: 3290)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3607)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5418)
+Completed 200 OK in 36ms (Views: 21.3ms | ActiveRecord: 0.9ms | Allocations: 10239)
+
+
+Started POST "/tasks" for ::1 at 2023-05-05 14:52:32 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"Погуляти з собакою", "body"=>"Не менше 2 годин"}, "commit"=>"Створити"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+  [1m[36mTask Create (2.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Погуляти з собакою"], ["body", "Не менше 2 годин"], ["completed", nil], ["user_id", 1], ["created_at", "2023-05-05 11:52:33.079749"], ["updated_at", "2023-05-05 11:52:33.079749"]]
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 5.9ms | Allocations: 5747)
+
+
+Started GET "/" for ::1 at 2023-05-05 14:52:33 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 2.8ms | Allocations: 1795)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2868)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 4680)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.5ms | Allocations: 6268)
+
+
+Started GET "/tasks/new" for ::1 at 2023-05-05 14:52:37 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (Duration: 4.9ms | Allocations: 2282)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2383)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4193)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 5746)
+
+
+Started POST "/tasks" for ::1 at 2023-05-05 14:52:44 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"Read book", "body"=>"Just read"}, "commit"=>"Створити"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+  [1m[36mTask Create (1.9ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Read book"], ["body", "Just read"], ["completed", nil], ["user_id", 1], ["created_at", "2023-05-05 11:52:44.611436"], ["updated_at", "2023-05-05 11:52:44.611436"]]
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 6.4ms | Allocations: 3418)
+
+
+Started GET "/" for ::1 at 2023-05-05 14:52:44 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 1.6ms | Allocations: 1508)
+  Rendered tasks/_task.html.erb (Duration: 1.2ms | Allocations: 1343)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3704)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5561)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.4ms | Allocations: 7177)
+
+
+Started PATCH "/tasks/12" for ::1 at 2023-05-05 14:52:49 +0300
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"completed"=>"1"}, "commit"=>"Оновити", "id"=>"12"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTask Update (2.1ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2023-05-05 11:52:49.697557"], ["id", 12]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/tasks/12
+Completed 302 Found in 23ms (ActiveRecord: 7.3ms | Allocations: 6644)
+
+
+Started GET "/tasks/12" for ::1 at 2023-05-05 14:52:49 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_task.html.erb (Duration: 2.1ms | Allocations: 1502)
+  Rendered tasks/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2144)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3946)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 6051)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:52:51 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 1.6ms | Allocations: 1496)
+  Rendered tasks/_task.html.erb (Duration: 2.3ms | Allocations: 1343)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3691)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5501)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.4ms | Allocations: 7063)
+
+
+Started PATCH "/tasks/12" for ::1 at 2023-05-05 14:52:55 +0300
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"completed"=>"1"}, "commit"=>"Оновити", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/tasks/12
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms | Allocations: 4243)
+
+
+Started GET "/tasks/12" for ::1 at 2023-05-05 14:52:55 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_task.html.erb (Duration: 3.8ms | Allocations: 1487)
+  Rendered tasks/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3739)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.9ms | Allocations: 5790)
+
+
+Started GET "/tasks/12/edit" for ::1 at 2023-05-05 14:52:59 +0300
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (Duration: 2.3ms | Allocations: 2416)
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2658)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4507)
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 6573)
+
+
+Started PATCH "/tasks/12" for ::1 at 2023-05-05 14:53:04 +0300
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"Погуляти з собакою", "body"=>"Не менше 3 годин"}, "commit"=>"Створити", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTask Update (2.0ms)[0m  [1m[33mUPDATE "tasks" SET "body" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["body", "Не менше 3 годин"], ["updated_at", "2023-05-05 11:53:05.056584"], ["id", 12]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/tasks/12
+Completed 302 Found in 18ms (ActiveRecord: 6.4ms | Allocations: 4935)
+
+
+Started GET "/tasks/12" for ::1 at 2023-05-05 14:53:05 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_task.html.erb (Duration: 2.1ms | Allocations: 1492)
+  Rendered tasks/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1895)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3697)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 5736)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:53:07 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 10.0ms | Allocations: 1496)
+  Rendered tasks/_task.html.erb (Duration: 1.9ms | Allocations: 1343)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 3691)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 5501)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.5ms | Allocations: 7066)
+
+
+Started PATCH "/tasks/12" for ::1 at 2023-05-05 14:54:25 +0300
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"completed"=>"1"}, "commit"=>"Оновити", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/tasks/12
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms | Allocations: 4250)
+
+
+Started GET "/tasks/12" for ::1 at 2023-05-05 14:54:25 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_task.html.erb (Duration: 1.5ms | Allocations: 1485)
+  Rendered tasks/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1888)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3690)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 5713)
+
+
+Started DELETE "/tasks/12" for ::1 at 2023-05-05 14:54:27 +0300
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+  [1m[36mTask Destroy (1.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 18ms (ActiveRecord: 6.0ms | Allocations: 3545)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:54:28 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 2.2ms | Allocations: 1502)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2270)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 4127)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 5713)
+
+
+Started PATCH "/tasks/13" for ::1 at 2023-05-05 14:55:46 +0300
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"completed"=>"0"}, "commit"=>"Оновити", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTask Update (2.9ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2023-05-05 11:55:46.772567"], ["id", 13]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/tasks/13
+Completed 302 Found in 23ms (ActiveRecord: 8.1ms | Allocations: 4930)
+
+
+Started GET "/tasks/13" for ::1 at 2023-05-05 14:55:46 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_task.html.erb (Duration: 2.0ms | Allocations: 1483)
+  Rendered tasks/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1886)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3706)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 5732)
+
+
+Started DELETE "/tasks/13" for ::1 at 2023-05-05 14:55:47 +0300
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+  [1m[36mTask Destroy (1.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 6.0ms | Allocations: 3474)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:55:48 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 693)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 2503)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 4082)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:56:22 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 976)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3030)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.4ms | Allocations: 5105)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:56:30 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3082)
+Completed 200 OK in 29ms (Views: 21.5ms | ActiveRecord: 0.6ms | Allocations: 5152)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:56:31 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2588)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 4155)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:58:09 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 3036)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 0.5ms | Allocations: 5137)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:58:15 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3033)
+Completed 200 OK in 25ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 5114)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:58:39 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 973)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3027)
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 0.5ms | Allocations: 5096)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:58:40 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2541)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 4095)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:58:46 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 973)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3027)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.4ms | Allocations: 5107)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:59:03 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3054)
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 0.4ms | Allocations: 5144)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 14:59:15 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 986)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3087)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 0.8ms | Allocations: 5166)
+
+
+Started GET "/tasks/new" for ::1 at 2023-05-05 15:01:17 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (Duration: 8.3ms | Allocations: 2608)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2928)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 4977)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.2ms | Allocations: 7017)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 15:01:20 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1988)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 3636)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", new_session_path, class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/tasks" for ::1 at 2023-05-05 15:01:29 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1919)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2001)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 4064)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource_name' for #<ActionView::Base:0x0000000000dea8>):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", new_session_path(resource_name), class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/tasks" for ::1 at 2023-05-05 15:02:03 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1989)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 4050)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", new_session_path, class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/tasks" for ::1 at 2023-05-05 15:02:21 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1925)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2007)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms | Allocations: 4070)
+
+
+  
+ActionView::Template::Error (Could not find a valid mapping for 0):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", new_session_path(0), class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/tasks" for ::1 at 2023-05-05 15:02:28 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1918)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2000)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms | Allocations: 4061)
+
+
+  
+ActionView::Template::Error (Could not find a valid mapping for 1):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", new_session_path(1), class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/tasks" for ::1 at 2023-05-05 15:02:47 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3082)
+Completed 200 OK in 24ms (Views: 19.0ms | ActiveRecord: 0.5ms | Allocations: 5167)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 15:04:11 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1969)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2051)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms | Allocations: 4109)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource_name' for #<ActionView::Base:0x0000000000eb28>):
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%# <%= link_to "Вийти за аккаунту", new_task_path, class: "btn btn-danger mt-3 mb-3" %>
+    14:     <%- if controller_name != 'sessions' %>
+    15:       <%= link_to "Авторизуватися", new_session_path(resource_name) %><br />
+    16:     <% end %>
+    17:   </div>
+    18: </div>
+  
+app/views/tasks/index.html.erb:15
+Started GET "/tasks" for ::1 at 2023-05-05 15:04:41 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3083)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.4ms | Allocations: 5164)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:05:28 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1491)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:05:28 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3035)
+Completed 200 OK in 22ms (Views: 17.5ms | ActiveRecord: 0.4ms | Allocations: 5135)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:18:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 125ms (ActiveRecord: 1.2ms | Allocations: 10463)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:18:56 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 1752)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 1848)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.3ms | Allocations: 9118)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Завдання</h1>
+
+<div id="tasks">
+  <div class="row">
+    <% @tasks.each do |task| %>
+      <%= render task %>
+  <% end %>
+  </div>
+  <div id="REX">
+    <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    <%= link_to "Вийти за аккаунту", , class: "btn btn-danger mt-3 mb-3" %>
+  </div>
+</div>
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Завдання</h1>
+4:    
+5:    <div id="tasks">
+6:      <div class="row">
+7:        <% @tasks.each do |task| %>
+8:          <%= render task %>
+9:      <% end %>
+10:      </div>
+11:      <div id="REX">
+12:        <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+13:        <%= link_to "Вийти за аккаунту", , class: "btn btn-danger mt-3 mb-3" %>
+14:      </div>
+15:    </div>
+  
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+Started GET "/" for ::1 at 2023-05-05 15:19:13 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 2877)
+  Rendered layout layouts/application.html.erb (Duration: 124.4ms | Allocations: 23212)
+Completed 200 OK in 137ms (Views: 130.5ms | ActiveRecord: 0.8ms | Allocations: 25348)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:19:23 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1921)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2004)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 4061)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", new_session_path, class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/" for ::1 at 2023-05-05 15:19:54 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1918)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2001)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms | Allocations: 4056)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource_name' for #<ActionView::Base:0x0000000000d098>):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", new_session_path(resource_name), class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/" for ::1 at 2023-05-05 15:21:53 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1295)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 3349)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Завдання</h1>
+
+<div id="tasks">
+  <div class="row">
+    <% @tasks.each do |task| %>
+      <%= render task %>
+  <% end %>
+  </div>
+  <div id="REX">
+    <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    <%= link_to "Вийти за аккаунту", class User, class: "btn btn-danger mt-3 mb-3" %>
+  </div>
+</div>
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Завдання</h1>
+4:    
+5:    <div id="tasks">
+6:      <div class="row">
+7:        <% @tasks.each do |task| %>
+8:          <%= render task %>
+9:      <% end %>
+10:      </div>
+11:      <div id="REX">
+12:        <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+13:        <%= link_to "Вийти за аккаунту", class User, class: "btn btn-danger mt-3 mb-3" %>
+14:      </div>
+15:    </div>
+  
+app/views/tasks/index.html.erb:13: class definition in method body
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/tasks/index.html.erb:13: class definition in method body
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/tasks/index.html.erb:13: class definition in method body
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/tasks/index.html.erb:13: class definition in method body
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/tasks/index.html.erb:13: class definition in method body
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/tasks/index.html.erb:13: class definition in method body
+app/views/tasks/index.html.erb:13: syntax error, unexpected ','
+app/views/tasks/index.html.erb:17: syntax error, unexpected end-of-input
+Started GET "/" for ::1 at 2023-05-05 15:23:24 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1914)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1996)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms | Allocations: 4036)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mailer_path' for #<ActionView::Base:0x0000000000d750>):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти за аккаунту", mailer_path, class: "btn btn-danger mt-3 mb-3" %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/" for ::1 at 2023-05-05 15:25:27 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1927)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4048)
+Completed 200 OK in 34ms (Views: 15.2ms | ActiveRecord: 2.5ms | Allocations: 10430)
+
+
+Started GET "/mailer" for ::1 at 2023-05-05 15:25:32 +0300
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/mailer" for ::1 at 2023-05-05 15:26:57 +0300
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/mailer" for ::1 at 2023-05-05 15:26:59 +0300
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/" for ::1 at 2023-05-05 15:27:01 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 982)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3084)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 0.4ms | Allocations: 5158)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:27:03 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1641)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:27:03 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2588)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 4183)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:27:04 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms | Allocations: 1461)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:27:05 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2543)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.4ms | Allocations: 4127)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:27:05 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms | Allocations: 1440)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:27:05 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 2542)
+Completed 200 OK in 28ms (Views: 17.1ms | ActiveRecord: 1.0ms | Allocations: 4129)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:27:14 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3042)
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 0.4ms | Allocations: 5116)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:28:08 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2158)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4273)
+Completed 200 OK in 46ms (Views: 21.3ms | ActiveRecord: 2.2ms | Allocations: 10998)
+
+
+Started GET "/app%5Cviews%5Cdevise%5Csessions%5Cnew" for ::1 at 2023-05-05 15:28:11 +0300
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/app%5Cviews%5Cdevise%5Csessions%5Cnew" for ::1 at 2023-05-05 15:29:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/app%5Cviews%5Cdevise%5Csessions%5Cnew"):
+  
+Started GET "/" for ::1 at 2023-05-05 15:29:15 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2947)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3029)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.9ms | Allocations: 9747)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource_name' for #<ActionView::Base:0x0000000001d3a8>):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= link_to "Вийти з аккаунту", new_session_path(resource_name) %><br />
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/" for ::1 at 2023-05-05 15:30:34 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 980)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3094)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.5ms | Allocations: 5210)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:30:43 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 980)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3034)
+Completed 200 OK in 28ms (Views: 20.6ms | ActiveRecord: 0.5ms | Allocations: 5103)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:31:44 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2157)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4272)
+Completed 200 OK in 45ms (Views: 22.9ms | ActiveRecord: 2.7ms | Allocations: 10984)
+
+
+Started GET "/new" for ::1 at 2023-05-05 15:31:47 +0300
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/new" for ::1 at 2023-05-05 15:35:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/" for ::1 at 2023-05-05 15:35:18 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2152)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 4268)
+Completed 200 OK in 58ms (Views: 31.3ms | ActiveRecord: 3.0ms | Allocations: 11013)
+
+
+Started GET "/users/sign_out" for ::1 at 2023-05-05 15:35:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/rails/info/routes" for 127.0.0.1 at 2023-05-05 15:36:15 +0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/layouts/application.html.erb
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.4.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [54 times] (Duration: 11.5ms | Allocations: 8539)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionpack-7.0.4.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 4.5ms | Allocations: 858)
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 33.6ms | Allocations: 14297)
+  Rendered layout C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/templates/layouts/application.html.erb (Duration: 42.7ms | Allocations: 14572)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.0ms | Allocations: 15371)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:39:05 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1913)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1995)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.5ms | Allocations: 4079)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_action_path' for #<ActionView::Base:0x00000000027df8>):
+    10:   </div>
+    11:   <div id="REX">
+    12:     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    13:     <%= button_to "Вийти з аккаунту", home_action_path, method: :post %>
+    14:   </div>
+    15: </div>
+  
+app/views/tasks/index.html.erb:13
+Started GET "/" for ::1 at 2023-05-05 15:42:37 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 3285)
+Completed 200 OK in 33ms (Views: 25.8ms | ActiveRecord: 0.4ms | Allocations: 5384)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-05-05 15:42:39 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 37ms (ActiveRecord: 0.2ms | Allocations: 3201)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:42:40 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:42:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 719)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 405.3ms | Allocations: 12120)
+  Rendered layout layouts/application.html.erb (Duration: 414.3ms | Allocations: 13976)
+Completed 200 OK in 441ms (Views: 427.6ms | ActiveRecord: 0.0ms | Allocations: 15345)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 15:43:30 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "probniy@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 487ms (ActiveRecord: 0.4ms | Allocations: 14588)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:43:30 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1189)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3286)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 0.4ms | Allocations: 5321)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:43:49 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3266)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.5ms | Allocations: 5350)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-05-05 15:45:00 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 8ms (ActiveRecord: 0.4ms | Allocations: 1747)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:45:00 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:45:01 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 571)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4120)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5974)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 7002)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 15:45:14 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gromowvasiliy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gromowvasiliy@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 303ms (ActiveRecord: 0.3ms | Allocations: 2529)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:45:14 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 4.7ms | Allocations: 1754)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 171.8ms | Allocations: 21030)
+  Rendered layout layouts/application.html.erb (Duration: 180.2ms | Allocations: 22841)
+Completed 200 OK in 187ms (Views: 180.3ms | ActiveRecord: 3.1ms | Allocations: 24402)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-05-05 15:45:18 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 6ms (ActiveRecord: 0.2ms | Allocations: 1787)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:45:18 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:45:18 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3299)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5102)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 5708)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 15:45:23 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "probniy@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 298ms (ActiveRecord: 0.3ms | Allocations: 2275)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:45:24 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 2769)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 1.7ms | Allocations: 4354)
+
+
+Started GET "/tasks/new" for ::1 at 2023-05-05 15:46:17 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (Duration: 153.1ms | Allocations: 17235)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 155.5ms | Allocations: 17553)
+  Rendered layout layouts/application.html.erb (Duration: 161.2ms | Allocations: 19363)
+Completed 200 OK in 170ms (Views: 162.9ms | ActiveRecord: 0.3ms | Allocations: 20975)
+
+
+Started POST "/tasks" for ::1 at 2023-05-05 15:46:20 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"title"=>"Read book", "body"=>"hgd"}, "commit"=>"Створити"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+  [1m[36mTask Create (1.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Read book"], ["body", "hgd"], ["completed", nil], ["user_id", 1], ["created_at", "2023-05-05 12:46:21.070240"], ["updated_at", "2023-05-05 12:46:21.070240"]]
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 7.3ms | Allocations: 4805)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:46:21 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/_task.html.erb (Duration: 1.6ms | Allocations: 1497)
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2490)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4300)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 5893)
+
+
+Started PATCH "/tasks/14" for ::1 at 2023-05-05 15:46:22 +0300
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"completed"=>"0"}, "commit"=>"Оновити", "id"=>"14"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTask Update (1.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2023-05-05 12:46:22.821473"], ["id", 14]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/tasks/14
+Completed 302 Found in 23ms (ActiveRecord: 6.0ms | Allocations: 6575)
+
+
+Started GET "/tasks/14" for ::1 at 2023-05-05 15:46:22 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_task.html.erb (Duration: 1.5ms | Allocations: 1497)
+  Rendered tasks/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2127)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3931)
+Completed 200 OK in 25ms (Views: 17.0ms | ActiveRecord: 0.7ms | Allocations: 6042)
+
+
+Started PATCH "/tasks/14" for ::1 at 2023-05-05 15:46:40 +0300
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"completed"=>"0"}, "commit"=>"Оновити", "id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/tasks/14
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms | Allocations: 4256)
+
+
+Started GET "/tasks/14" for ::1 at 2023-05-05 15:46:40 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_task.html.erb (Duration: 1.4ms | Allocations: 1487)
+  Rendered tasks/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3728)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 5752)
+
+
+Started DELETE "/tasks/14" for ::1 at 2023-05-05 15:48:46 +0300
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"14"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:65:in `set_task'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+  [1m[36mTask Destroy (1.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:54:in `destroy'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 7.0ms | Allocations: 3553)
+
+
+Started GET "/tasks" for ::1 at 2023-05-05 15:48:47 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 918)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2728)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 4333)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-05-05 15:48:49 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.2ms | Allocations: 1729)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:48:49 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:48:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3301)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5103)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5709)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:54:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 92ms (ActiveRecord: 0.0ms | Allocations: 2695)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:54:08 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 730)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 211.4ms | Allocations: 12597)
+  Rendered layout layouts/application.html.erb (Duration: 355.0ms | Allocations: 33631)
+Completed 200 OK in 441ms (Views: 404.7ms | ActiveRecord: 1.5ms | Allocations: 41939)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 15:54:15 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "probniy@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 881ms (ActiveRecord: 1.0ms | Allocations: 5697)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:54:17 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 36.1ms | Allocations: 3017)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 4933)
+Completed 200 OK in 127ms (Views: 67.1ms | ActiveRecord: 3.8ms | Allocations: 9524)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-05-05 15:54:19 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 20ms (ActiveRecord: 0.8ms | Allocations: 2615)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:54:19 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 264)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:54:19 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3313)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 5117)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 5725)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 15:57:57 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "probniy@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 697ms (ActiveRecord: 0.4ms | Allocations: 1512)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 3309)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 5113)
+Completed 200 OK in 778ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 5669)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 15:58:04 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "probniy@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 683ms (ActiveRecord: 0.4ms | Allocations: 1471)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3303)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 5108)
+Completed 200 OK in 695ms (Views: 27.6ms | ActiveRecord: 0.0ms | Allocations: 5614)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-05 15:58:10 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"probniy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Авторизуватися"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "probniy@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 965ms (ActiveRecord: 0.7ms | Allocations: 2240)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:58:11 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 2733)
+Completed 200 OK in 30ms (Views: 24.1ms | ActiveRecord: 0.8ms | Allocations: 4321)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-05-05 15:58:13 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.4ms | Allocations: 1732)
+
+
+Started GET "/" for ::1 at 2023-05-05 15:58:13 +0300
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-05 15:58:13 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3308)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 5157)
+Completed 200 OK in 37ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 5785)
+
+

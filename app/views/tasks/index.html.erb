@@ -10,5 +10,6 @@
   </div>
   <div id="REX">
     <%= link_to "Створити нове завдання", new_task_path, class: "btn btn-primary mt-3 mb-3" %>
+    <%= button_to 'Вийти з аккаунта', destroy_user_session_path, method: :delete, class: "btn btn-danger mt-3 mb-3" %>
   </div>
 </div>
